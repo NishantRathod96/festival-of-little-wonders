@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100b24">
+<title>The Festival of Little Wonders ✦</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="vignette"></div>
+<main class="app">
+  <header class="top">
+    <div class="brand"><span>✦</span> A NIGHT OF WONDERS</div>
+    <div class="progress-label"><span id="count">0</span> / 5 DISCOVERED</div>
+  </header>
+
+  <section class="intro" id="intro">
+    <div class="eyebrow">A LITTLE FESTIVE EXPERIENCE</div>
+    <h1>Tonight, the stars<br><em>have a wish for you.</em></h1>
+    <p>Five little lights. Five lovely wishes.<br>Explore the sky and collect them all.</p>
+    <button class="gold-button" id="begin">ENTER THE NIGHT <span>↗</span></button>
+    <div class="scroll-cue">MADE OF LIGHT & GOOD WISHES <span>✧</span></div>
+  </section>
+
+  <section class="universe hidden" id="universe">
+    <div class="universe-heading">
+      <div class="eyebrow">YOUR LITTLE CONSTELLATION</div>
+      <h2>Find the <em>five lights.</em></h2>
+      <p>Tap each glowing star to uncover its wish.</p>
+    </div>
+    <div class="sky-map" id="skyMap">
+      <svg class="connections" viewBox="0 0 600 390" preserveAspectRatio="none" aria-hidden="true">
+        <path id="constellationPath" d="M90 230 L190 95 L315 175 L430 75 L520 245" />
+      </svg>
+      <button class="star-node n1" data-star="0" aria-label="Discover the first star"><span class="star-core">✦</span><small>01</small></button>
+      <button class="star-node n2" data-star="1" aria-label="Discover the second star"><span class="star-core">✦</span><small>02</small></button>
+      <button class="star-node n3" data-star="2" aria-label="Discover the third star"><span class="star-core">✦</span><small>03</small></button>
+      <button class="star-node n4" data-star="3" aria-label="Discover the fourth star"><span class="star-core">✦</span><small>04</small></button>
+      <button class="star-node n5" data-star="4" aria-label="Discover the fifth star"><span class="star-core">✦</span><small>05</small></button>
+      <div class="map-hint">THE SKY IS YOURS TO EXPLORE</div>
+    </div>
+    <div class="wish-panel" id="wishPanel" aria-live="polite">
+      <div class="panel-star">✧</div>
+      <div class="panel-label">A LITTLE WONDER</div>
+      <h3 id="wishTitle">A wish is waiting...</h3>
+      <p id="wishText">Choose any glowing star above to reveal it.</p>
+    </div>
+    <div class="completion" id="completion">
+      <div class="completion-mark">✦ ✧ ✦</div>
+      <div class="eyebrow">THE SKY HAS SOMETHING FOR YOU</div>
+      <h2>Some moments deserve<br>their own <em>little universe.</em></h2>
+      <p>May your days be filled with happiness, your dreams find their way, and every new beginning bring something beautiful.</p>
+      <div class="final-greeting">Happy Diwali Padwa,<br><strong>Shweta!</strong></div>
+      <div class="signoff">Keep shining. Always. ✨</div>
+      <button class="text-button" id="again">↻ EXPLORE THE SKY AGAIN</button>
+    </div>
+  </section>
+
+  <footer class="footer"><span>✧</span> MAY YOUR WORLD ALWAYS BE BRIGHT <span>✧</span></footer>
+</main>
+<div class="modal-backdrop" id="modal" aria-hidden="true">
+  <div class="modal">
+    <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+    <div class="modal-symbol" id="modalSymbol">✦</div>
+    <div class="eyebrow" id="modalEyebrow">A LITTLE WONDER</div>
+    <h2 id="modalTitle">Happiness</h2>
+    <p id="modalText">May happiness find you in the smallest moments.</p>
+    <button class="gold-button small" id="collect">COLLECT THIS LIGHT <span>✧</span></button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
